@@ -97,6 +97,17 @@ export default function Home() {
 
             {/* Hero Right Image Card */}
             <div className="lg:col-span-5 hidden lg:block">
+              <div className="relative p-2 rounded-lg bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm overflow-hidden">
+                <img
+                  src="/wp-content/uploads/2017/06/Lansing.ResurrectionCath..jpg"
+                  alt="Church of the Resurrection"
+                  className="w-full h-80 object-cover rounded-md shadow-inner border border-white/10"
+                />
+                <div className="absolute bottom-4 left-4 right-4 bg-[#0d1f50]/90 backdrop-blur-md border border-[#f7b718]/40 p-4 rounded text-center">
+                  <p className="text-xxs font-bold text-[#f7b718] uppercase tracking-wider">Lansing Council #11099</p>
+                  <p className="text-xs font-semibold text-white mt-0.5">Church of the Resurrection</p>
+                </div>
+              </div>
             </div>
 
           </div>
