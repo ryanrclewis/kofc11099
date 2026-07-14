@@ -29,8 +29,8 @@ const headerIA: NavDropdown[] = [
           { name: 'Overview', href: '/about-us' },
           { name: 'Member Benefits', href: '/membership' },
           { name: 'Our Mission & Story', href: '/about-us#mission' },
-          { name: 'Our History', href: '/about-us#history' },
-          { name: 'Our Founder', href: '/about-us#founder' }
+          { name: 'Our History', href: 'https://www.kofc.org/who-we-are/our-history/', isExternal: true },
+          { name: 'Our Founder', href: 'https://www.kofc.org/who-we-are/our-founder/', isExternal: true }
         ]
       },
       {
