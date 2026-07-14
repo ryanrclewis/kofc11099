@@ -129,7 +129,7 @@ const searchableItems: SearchableItem[] = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  
+
   // Search State
   const [searchQuery, setSearchQuery] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
@@ -161,9 +161,9 @@ export default function Header() {
 
   const filteredItems = searchQuery.trim()
     ? searchableItems.filter(item =>
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.category.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.category.toLowerCase().includes(searchQuery.toLowerCase())
+    )
     : [];
 
   return (
@@ -178,9 +178,9 @@ export default function Header() {
             <Link href="/membership" className="text-white/80 hover:text-[#f7b718] font-semibold transition">
               Join
             </Link>
-            <Link href="/contact-us" className="text-white/80 hover:text-[#f7b718] font-semibold transition">
+            {/* <Link href="/contact-us" className="text-white/80 hover:text-[#f7b718] font-semibold transition">
               Donate
-            </Link>
+            </Link> */}
             {/* <a 
               href="https://www.kofc.org/en/safe-environment-program/index.html" 
               target="_blank" 
@@ -212,7 +212,7 @@ export default function Header() {
       {/* Main Navigation Header */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          
+
           {/* Logo & Emblem Branding */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-3 group">
@@ -241,16 +241,14 @@ export default function Header() {
                 onMouseEnter={() => setActiveDropdown(dropdown.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button 
-                  className={`flex items-center px-4 py-2 text-sm font-semibold rounded-md transition duration-150 ease-in-out cursor-pointer hover:bg-white/5 ${
-                    activeDropdown === dropdown.name ? 'text-[#f7b718]' : 'text-white/90'
-                  }`}
+                <button
+                  className={`flex items-center px-4 py-2 text-sm font-semibold rounded-md transition duration-150 ease-in-out cursor-pointer hover:bg-white/5 ${activeDropdown === dropdown.name ? 'text-[#f7b718]' : 'text-white/90'
+                    }`}
                 >
                   {dropdown.name}
                   <svg
-                    className={`ml-1.5 h-4 w-4 fill-current transition-transform duration-200 ${
-                      activeDropdown === dropdown.name ? 'rotate-180 text-[#f7b718]' : 'text-white/60'
-                    }`}
+                    className={`ml-1.5 h-4 w-4 fill-current transition-transform duration-200 ${activeDropdown === dropdown.name ? 'rotate-180 text-[#f7b718]' : 'text-white/60'
+                      }`}
                     viewBox="0 0 20 20"
                   >
                     <path d="M5.52 7.2a.75.75 0 011.06.04L10 10.88l3.42-3.64a.75.75 0 111.08 1.04l-4 4.25a.75.75 0 01-1.08 0l-4-4.25a.75.75 0 01.04-1.06z" />
@@ -439,9 +437,8 @@ export default function Header() {
                 >
                   {dropdown.name}
                   <svg
-                    className={`h-5 w-5 transform transition-transform duration-200 ${
-                      activeDropdown === dropdown.name ? 'rotate-180 text-[#f7b718]' : 'text-white/50'
-                    }`}
+                    className={`h-5 w-5 transform transition-transform duration-200 ${activeDropdown === dropdown.name ? 'rotate-180 text-[#f7b718]' : 'text-white/50'
+                      }`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -449,7 +446,7 @@ export default function Header() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                
+
                 {activeDropdown === dropdown.name && (
                   <div className="pl-3 space-y-3 pt-1">
                     {dropdown.sections.map((section, sIdx) => (
