@@ -55,9 +55,14 @@ export default function Home() {
             
             {/* Hero Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <h1 className="text-4xl sm:text-5xl md:text-6.5xl font-extrabold tracking-tight font-serif leading-none">
-                Knights of <span className="text-gradient-gold">Columbus</span>
-              </h1>
+              <div>
+                <p className="text-sm sm:text-base font-bold text-accent uppercase tracking-widest font-sans mb-3 block">
+                  Msgr. John A. Gabriels Council #11099
+                </p>
+                <h1 className="text-4xl sm:text-5xl md:text-6.5xl font-extrabold tracking-tight font-serif leading-none">
+                  Knights of <span className="text-gradient-gold">Columbus</span>
+                </h1>
+              </div>
               <p className="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed font-medium">
                 A brotherhood of practical Catholic men. Supporting our parish, volunteering in our community, and growing together in faith, charity, and unity.
               </p>
@@ -81,8 +86,8 @@ export default function Home() {
             <div className="lg:col-span-5 hidden lg:block">
               <div className="relative p-2 rounded-2xl bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm overflow-hidden">
                 <img
-                  src="/wp-content/uploads/2017/06/11099.jpg"
-                  alt="Council group photo"
+                  src="/wp-content/uploads/2017/06/Lansing.ResurrectionCath..jpg"
+                  alt="Church of the Resurrection"
                   className="w-full h-80 object-cover rounded-xl shadow-inner border border-white/10"
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md border border-white/10 p-4 rounded-xl text-center">
@@ -128,7 +133,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Block 1: Meetings */}
-            <div className="card-premium p-8 rounded-2xl flex flex-col h-full bg-white">
+            <div className="card-premium p-8 rounded-2xl flex flex-col h-full bg-white hover:border-emerald-500">
               <div className="h-12 w-12 rounded-xl bg-emerald-50 text-primary flex items-center justify-center mb-6 border border-emerald-100 shadow-sm">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -144,7 +149,7 @@ export default function Home() {
             </div>
 
             {/* Block 2: Volunteer Sign-up */}
-            <div className="card-premium p-8 rounded-2xl flex flex-col h-full bg-white">
+            <div className="card-premium p-8 rounded-2xl flex flex-col h-full bg-white hover:border-blue-500">
               <div className="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 border border-blue-100 shadow-sm">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -160,7 +165,7 @@ export default function Home() {
             </div>
 
             {/* Block 3: Knight Events */}
-            <div className="card-premium p-8 rounded-2xl flex flex-col h-full bg-white">
+            <div className="card-premium p-8 rounded-2xl flex flex-col h-full bg-white hover:border-amber-500">
               <div className="h-12 w-12 rounded-xl bg-amber-50 text-accent flex items-center justify-center mb-6 border border-amber-100 shadow-sm">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -176,7 +181,7 @@ export default function Home() {
             </div>
 
             {/* Block 4: Like No Other Group */}
-            <div className="card-premium p-8 rounded-2xl flex flex-col h-full bg-white">
+            <div className="card-premium p-8 rounded-2xl flex flex-col h-full bg-white hover:border-purple-500">
               <div className="h-12 w-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6 border border-purple-100 shadow-sm">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
