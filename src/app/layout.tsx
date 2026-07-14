@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Serif } from "next/font/google";
+import { Roboto, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,7 +10,7 @@ const sans = Roboto({
   subsets: ["latin"],
 });
 
-const serif = Roboto_Serif({
+const serif = EB_Garamond({
   weight: ["400", "500", "600", "700"],
   variable: "--font-serif",
   subsets: ["latin"],

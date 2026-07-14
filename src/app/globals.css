@@ -1,22 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfdfe;
-  --foreground: #0c1523;
+  --background: #ffffff;
+  --foreground: #000000;
+  
+  /* Official KofC Branding Colors */
+  --colorNavyKnight: #112866;
+  --colorNavyKnightLight: #163484;
+  --colorNavyKnightDark: #0d1f50;
+  
+  --colorKnightGold: #f7b718;
+  --colorKnightGoldLight: #fcd56e;
+  --colorKnightGoldDark: #e2a501;
+  
+  --colorKnightRed: #cb0e0e;
+  --colorKnightRedLight: #f45b5b;
+  --colorKnightRedDark: #ad0808;
+  
+  --colorInsuranceBlue: #0277d9;
+  --colorInsuranceBlueLight: #0e89ed;
+  --colorInsuranceBlueDark: #0265b7;
+  
+  --colorMetal: #626161;
+  --colorMetalLight: #7c7d7e;
+  --colorMetalDark: #3a393b;
+  
+  --colorIce: #d7e4f1;
+  --colorIceLight: #ebf1f8;
+  --colorIceDark: #bfcfde;
+  
+  --colorCream: #f8f5ee;
+  --colorLighterGray: #f7f7f7;
+  --colorLightGray: #c6c6c6;
 }
 
 @theme {
-  --color-primary: #112866; /* Official Knights of Columbus Navy Blue */
-  --color-primary-dark: #0d1f50;
-  --color-primary-light: #f0f4fc;
-  --color-secondary: #0d1f50; /* Deep Fraternal Blue */
-  --color-secondary-dark: #081433; /* Dark Navy Slate */
-  --color-accent: #ffc72c; /* Official Knights of Columbus Gold */
-  --color-accent-dark: #d9a300;
-  --color-accent-light: #fffdf2;
-  --color-red: #d11919;
-  --color-dark: #081433;
-  --color-light: #f4f6f9;
+  --color-primary: var(--colorNavyKnight);
+  --color-primary-light: var(--colorNavyKnightLight);
+  --color-primary-dark: var(--colorNavyKnightDark);
+  
+  --color-accent: var(--colorKnightGold);
+  --color-accent-light: var(--colorKnightGoldLight);
+  --color-accent-dark: var(--colorKnightGoldDark);
+  
+  --color-red: var(--colorKnightRed);
+  --color-red-light: var(--colorKnightRedLight);
+  --color-red-dark: var(--colorKnightRedDark);
+  
+  --color-insurance: var(--colorInsuranceBlue);
+  --color-insurance-light: var(--colorInsuranceBlueLight);
+  --color-insurance-dark: var(--colorInsuranceBlueDark);
+  
+  --color-metal: var(--colorMetal);
+  --color-metal-light: var(--colorMetalLight);
+  --color-metal-dark: var(--colorMetalDark);
+  
+  --color-ice: var(--colorIce);
+  --color-ice-light: var(--colorIceLight);
+  --color-ice-dark: var(--colorIceDark);
+  
+  --color-cream: var(--colorCream);
+  --color-light-gray: var(--colorLightGray);
+  --color-lighter-gray: var(--colorLighterGray);
+  
+  --color-dark: var(--colorNavyKnightDark);
+  --color-light: var(--colorLighterGray);
+  
   --font-sans: var(--font-sans), sans-serif;
   --font-serif: var(--font-serif), serif;
 }
@@ -43,59 +92,63 @@ body {
   background: #94a3b8;
 }
 
-/* Polished Traditional Gradients & Components */
+/* KofC Style Custom Layout & Components */
 .hero-gradient {
-  background: linear-gradient(135deg, #112866 0%, #0d1f50 100%);
+  background: linear-gradient(180deg, #0d1f50 0%, #112866 100%);
   position: relative;
 }
 
 .hero-gradient::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to bottom, transparent 60%, rgba(13, 31, 80, 0.2));
-  pointer-events: none;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--colorKnightGold);
 }
 
 .card-premium {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-premium:hover {
-  border-color: #ffc72c;
-  box-shadow: 0 4px 6px -1px rgba(17, 40, 102, 0.05), 0 2px 4px -1px rgba(17, 40, 102, 0.03);
+  border-color: var(--colorKnightGold);
+  box-shadow: 0 4px 12px rgba(13, 31, 80, 0.08);
+  transform: translateY(-2px);
 }
 
 .glass-header {
-  background: #112866;
-  border-bottom: 3px solid #ffc72c;
+  background: var(--colorNavyKnightDark);
+  border-bottom: 4px solid var(--colorKnightGold);
 }
 
 .btn-primary {
-  background-color: #112866;
+  background-color: var(--colorNavyKnight);
   color: #ffffff;
-  border: 1px solid #0d1f50;
+  border: 1px solid var(--colorNavyKnightDark);
   transition: all 0.15s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #0d1f50;
+  background-color: var(--colorNavyKnightDark);
 }
 
 .btn-accent {
-  background-color: #ffc72c;
-  color: #0d1f50;
-  border: 1px solid #d9a300;
+  background-color: var(--colorKnightGold);
+  color: var(--colorNavyKnightDark);
+  border: 1px solid var(--colorKnightGoldDark);
   transition: all 0.15s ease-in-out;
 }
 
 .btn-accent:hover {
-  background-color: #e6b222;
+  background-color: var(--colorKnightGoldLight);
 }
 
 .text-gradient-gold {
-  color: #ffc72c;
+  color: var(--colorKnightGold);
 }
+
