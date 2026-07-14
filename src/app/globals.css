@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fcfdfe;
+  --foreground: #0c1523;
+}
+
+@theme {
+  --color-primary: #112866; /* Official Knights of Columbus Navy Blue */
+  --color-primary-dark: #0d1f50;
+  --color-primary-light: #f0f4fc;
+  --color-secondary: #0d1f50; /* Deep Fraternal Blue */
+  --color-secondary-dark: #081433; /* Dark Navy Slate */
+  --color-accent: #ffc72c; /* Official Knights of Columbus Gold */
+  --color-accent-dark: #d9a300;
+  --color-accent-light: #fffdf2;
+  --color-red: #d11919;
+  --color-dark: #081433;
+  --color-light: #f4f6f9;
+  --font-sans: var(--font-sans), sans-serif;
+  --font-serif: var(--font-serif), serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Elegant Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f4fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Polished Traditional Gradients & Components */
+.hero-gradient {
+  background: linear-gradient(135deg, #112866 0%, #0d1f50 100%);
+  position: relative;
+}
+
+.hero-gradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to bottom, transparent 60%, rgba(13, 31, 80, 0.2));
+  pointer-events: none;
+}
+
+.card-premium {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-premium:hover {
+  border-color: #ffc72c;
+  box-shadow: 0 4px 6px -1px rgba(17, 40, 102, 0.05), 0 2px 4px -1px rgba(17, 40, 102, 0.03);
+}
+
+.glass-header {
+  background: #112866;
+  border-bottom: 3px solid #ffc72c;
+}
+
+.btn-primary {
+  background-color: #112866;
+  color: #ffffff;
+  border: 1px solid #0d1f50;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0d1f50;
+}
+
+.btn-accent {
+  background-color: #ffc72c;
+  color: #0d1f50;
+  border: 1px solid #d9a300;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-accent:hover {
+  background-color: #e6b222;
+}
+
+.text-gradient-gold {
+  color: #ffc72c;
+}
