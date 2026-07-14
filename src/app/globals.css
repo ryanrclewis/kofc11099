@@ -68,6 +68,17 @@
   
   --font-sans: var(--font-sans), sans-serif;
   --font-serif: var(--font-serif), serif;
+
+  --animate-marquee: marquee-scroll var(--animation-duration, 60s) linear infinite;
+
+  @keyframes marquee-scroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-33.333333333333336%, 0, 0);
+    }
+  }
 }
 
 body {
@@ -151,4 +162,19 @@ body {
 .text-gradient-gold {
   color: var(--colorKnightGold);
 }
+
+/* Responsive animation duration overrides for Tailwind's marquee */
+@media (max-width: 1024px) {
+  .animate-marquee {
+    animation-duration: var(--tablet-animation-duration, 50s) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: var(--mobile-animation-duration, 40s) !important;
+  }
+}
+
+
 

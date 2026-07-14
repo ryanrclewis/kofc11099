@@ -44,6 +44,16 @@ const recentPosts: BlogPost[] = [
   },
 ];
 
+const factsList = [
+  { value: '$124B', valueLabel: 'Life Insurance', label: 'in force**' },
+  { value: '1.6M', valueLabel: 'Policies', label: 'in force*' },
+  { value: '900+', valueLabel: 'Agents', label: 'in the U.S. and Canada*' },
+  { value: '$31B', valueLabel: 'Assets', label: 'under management**' },
+  { value: '$197M', valueLabel: 'Donated', label: 'in 2025*' },
+  { value: '48M', valueLabel: 'Volunteer Hours', label: 'in 2025*' },
+  { value: '$235M', valueLabel: 'Donated', label: 'through K of C Charitable Fund*' },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -87,17 +97,6 @@ export default function Home() {
 
             {/* Hero Right Image Card */}
             <div className="lg:col-span-5 hidden lg:block">
-              <div className="relative p-2 rounded-lg bg-white/5 border border-white/10 shadow-2xl backdrop-blur-sm overflow-hidden">
-                <img
-                  src="/wp-content/uploads/2017/06/Lansing.ResurrectionCath..jpg"
-                  alt="Church of the Resurrection"
-                  className="w-full h-80 object-cover rounded-md shadow-inner border border-white/10"
-                />
-                <div className="absolute bottom-4 left-4 right-4 bg-[#0d1f50]/90 backdrop-blur-md border border-[#f7b718]/40 p-4 rounded text-center">
-                  <p className="text-xxs font-bold text-[#f7b718] uppercase tracking-wider">Lansing Council #11099</p>
-                  <p className="text-xs font-semibold text-white mt-0.5">Church of the Resurrection</p>
-                </div>
-              </div>
             </div>
 
           </div>
@@ -274,31 +273,45 @@ export default function Home() {
       </section>
 
       {/* Impact Stats Block - "Where There's a Need, There's a Knight" */}
-      <section className="py-16 bg-[#0d1f50] text-white border-y border-[#f7b718]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+      <section className="py-12 bg-[#0b183d] text-white border-y border-[#f7b718] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold font-serif text-white">Where There’s a Need, There’s a Knight</h2>
             <p className="mt-3 text-slate-400 text-xs sm:text-sm">
               The impact of our council fraternity and worldwide organization in service of God and community.
             </p>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-700">
-            {/* Stat 1 */}
-            <div className="pt-6 md:pt-0">
-              <p className="text-4xl sm:text-5xl font-extrabold text-[#f7b718] font-serif">2.2M</p>
-              <p className="text-xs uppercase tracking-wider font-semibold text-slate-300 mt-2">Members Worldwide</p>
-            </div>
-            {/* Stat 2 */}
-            <div className="pt-6 md:pt-0">
-              <p className="text-4xl sm:text-5xl font-extrabold text-[#f7b718] font-serif">$197M</p>
-              <p className="text-xs uppercase tracking-wider font-semibold text-slate-300 mt-2">Donated Last Year</p>
-            </div>
-            {/* Stat 3 */}
-            <div className="pt-6 md:pt-0">
-              <p className="text-4xl sm:text-5xl font-extrabold text-[#f7b718] font-serif">48M</p>
-              <p className="text-xs uppercase tracking-wider font-semibold text-slate-300 mt-2">Volunteer Hours Completed</p>
-            </div>
+        {/* Facts Ticker Marquee */}
+        <div
+          className="w-full py-4 relative"
+          style={{
+            '--animation-duration': '60s',
+            '--tablet-animation-duration': '50s',
+            '--mobile-animation-duration': '40s',
+            '--tip-bg-color': 'var(--colorBlack)',
+            '--facts-length': 6
+          } as React.CSSProperties}
+        >
+          <div className="flex w-max items-center animate-marquee">
+            {[0, 1, 2].map((groupIndex) => (
+              <div key={groupIndex} className="flex items-center shrink-0">
+                {factsList.map((fact, idx) => (
+                  <div key={idx} className="flex items-center shrink-0">
+                    <div className="inline-flex flex-col justify-center items-start px-14 shrink-0">
+                      <span className="font-serif text-lg sm:text-xl font-bold text-[#f7b718]">
+                        {fact.value} &nbsp;<span className="text-white">{fact.valueLabel}</span>
+                      </span>
+                      <span className="font-sans text-[10px] sm:text-xs text-slate-300 mt-0.5">{fact.label}</span>
+                    </div>
+                    <svg className="mx-4 shrink-0" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <rect x="8" width="11.3137" height="11.3137" transform="rotate(45 8 0)" fill="#0277D9"></rect>
+                    </svg>
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -403,7 +416,7 @@ export default function Home() {
       <section className="relative py-24 bg-[#0d1f50] border-t border-white/10 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Image on left - Circular frame with blue halo glow */}
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 border-white/20 shadow-[0_0_50px_rgba(2,119,217,0.55)] overflow-hidden">
@@ -439,7 +452,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            
+
           </div>
         </div>
       </section>
