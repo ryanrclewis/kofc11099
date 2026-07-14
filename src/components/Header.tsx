@@ -273,7 +273,7 @@ export default function Header() {
                                   rel="noreferrer"
                                   className="block text-sm font-semibold text-[#112866] hover:text-[#0277d9] transition py-1"
                                 >
-                                  {link.name} &nearr;
+                                  {link.name} ↗
                                 </a>
                               ) : (
                                 <Link
@@ -464,7 +464,7 @@ export default function Header() {
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="block py-1 text-sm font-semibold text-white/80 hover:text-[#f7b718]"
                               >
-                                {link.name} &nearr;
+                                {link.name} ↗
                               </a>
                             ) : (
                               <Link

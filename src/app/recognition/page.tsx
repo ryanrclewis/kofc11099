@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Recognition &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Recognition | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Recognition &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Recognition"
         subtitle="Council fraternal activities, charity challenges, and parish events."
         breadcrumbs={[
           { name: 'Events', href: '/upcoming-events' },
-          { name: 'Recognition &#8211; &#8211; Knights of Columbus &#8211;', href: '/recognition' }
+          { name: 'Recognition', href: '/recognition' }
         ]}
       />
 
@@ -30,7 +30,7 @@ export default function Page() {
                 </div>
               ) : (
                 <p className="text-sm text-slate-500">
-                  Join us for our annual Recognition &#8211; &#8211; Knights of Columbus &#8211; event! Download the files on the right for registration and schedules.
+                  Join us for our annual Recognition event! Download the files on the right for registration and schedules.
                 </p>
               )}
             </div>

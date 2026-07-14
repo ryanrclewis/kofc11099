@@ -1,18 +1,18 @@
 import SectionHeader from '@/components/SectionHeader';
 
 export const metadata = {
-  title: 'Family of the Month &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Family of the Month | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Family of the Month &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Family of the Month"
         subtitle="Celebrating our council's outstanding individuals and families."
         breadcrumbs={[
           { name: 'Recognition', href: '/recognition' },
-          { name: 'Family of the Month &#8211; &#8211; Knights of Columbus &#8211;', href: '/family-of-the-month' }
+          { name: 'Family of the Month', href: '/family-of-the-month' }
         ]}
       />
       <div className="max-w-3xl mx-auto px-4 py-16 w-full">

@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Updates from the Grand Knight &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Updates from the Grand Knight | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Updates from the Grand Knight &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Updates from the Grand Knight"
         subtitle="Fraternal updates and announcements from Council #11099 leadership."
         breadcrumbs={[
           { name: 'News', href: '/' },
-          { name: 'Updates from the Grand Knight &#8211; &#8211; Knights of Columbus &#8211;', href: '/updates-from-the-grand-knight' }
+          { name: 'Updates from the Grand Knight', href: '/updates-from-the-grand-knight' }
         ]}
       />
 

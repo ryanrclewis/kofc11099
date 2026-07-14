@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Free Throw Challenge &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Free Throw Challenge | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Free Throw Challenge &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Free Throw Challenge"
         subtitle="Council fraternal activities, charity challenges, and parish events."
         breadcrumbs={[
           { name: 'Events', href: '/upcoming-events' },
-          { name: 'Free Throw Challenge &#8211; &#8211; Knights of Columbus &#8211;', href: '/free-throw-challenge' }
+          { name: 'Free Throw Challenge', href: '/free-throw-challenge' }
         ]}
       />
 
@@ -34,7 +34,7 @@ export default function Page() {
                 </div>
               ) : (
                 <p className="text-sm text-slate-500">
-                  Join us for our annual Free Throw Challenge &#8211; &#8211; Knights of Columbus &#8211; event! Download the files on the right for registration and schedules.
+                  Join us for our annual Free Throw Challenge event! Download the files on the right for registration and schedules.
                 </p>
               )}
             </div>

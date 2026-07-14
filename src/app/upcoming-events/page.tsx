@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Upcoming Events &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Upcoming Events | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Upcoming Events &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Upcoming Events"
         subtitle="Council fraternal activities, charity challenges, and parish events."
         breadcrumbs={[
           { name: 'Events', href: '/upcoming-events' },
-          { name: 'Upcoming Events &#8211; &#8211; Knights of Columbus &#8211;', href: '/upcoming-events' }
+          { name: 'Upcoming Events', href: '/upcoming-events' }
         ]}
       />
 
@@ -30,7 +30,7 @@ export default function Page() {
                 </div>
               ) : (
                 <p className="text-sm text-slate-500">
-                  Join us for our annual Upcoming Events &#8211; &#8211; Knights of Columbus &#8211; event! Download the files on the right for registration and schedules.
+                  Join us for our annual Upcoming Events event! Download the files on the right for registration and schedules.
                 </p>
               )}
             </div>

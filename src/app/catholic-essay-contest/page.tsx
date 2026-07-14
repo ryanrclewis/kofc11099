@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Catholic Essay Contest &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Catholic Essay Contest | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Catholic Essay Contest &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Catholic Essay Contest"
         subtitle="Council fraternal activities, charity challenges, and parish events."
         breadcrumbs={[
           { name: 'Events', href: '/upcoming-events' },
-          { name: 'Catholic Essay Contest &#8211; &#8211; Knights of Columbus &#8211;', href: '/catholic-essay-contest' }
+          { name: 'Catholic Essay Contest', href: '/catholic-essay-contest' }
         ]}
       />
 
@@ -54,7 +54,7 @@ export default function Page() {
                 </div>
               ) : (
                 <p className="text-sm text-slate-500">
-                  Join us for our annual Catholic Essay Contest &#8211; &#8211; Knights of Columbus &#8211; event! Download the files on the right for registration and schedules.
+                  Join us for our annual Catholic Essay Contest event! Download the files on the right for registration and schedules.
                 </p>
               )}
             </div>

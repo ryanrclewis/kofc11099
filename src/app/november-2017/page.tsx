@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: '2017 Archangel Newsletters &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: '2017 Archangel Newsletters | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="2017 Archangel Newsletters &#8211; &#8211; Knights of Columbus &#8211;"
+        title="2017 Archangel Newsletters"
         subtitle="Council fraternal activities, charity challenges, and parish events."
         breadcrumbs={[
           { name: 'Events', href: '/upcoming-events' },
-          { name: '2017 Archangel Newsletters &#8211; &#8211; Knights of Columbus &#8211;', href: '/november-2017' }
+          { name: '2017 Archangel Newsletters', href: '/november-2017' }
         ]}
       />
 
@@ -30,7 +30,7 @@ export default function Page() {
                 </div>
               ) : (
                 <p className="text-sm text-slate-500">
-                  Join us for our annual 2017 Archangel Newsletters &#8211; &#8211; Knights of Columbus &#8211; event! Download the files on the right for registration and schedules.
+                  Join us for our annual 2017 Archangel Newsletters event! Download the files on the right for registration and schedules.
                 </p>
               )}
             </div>

@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Soccer Challenge &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Soccer Challenge | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Soccer Challenge &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Soccer Challenge"
         subtitle="Council fraternal activities, charity challenges, and parish events."
         breadcrumbs={[
           { name: 'Events', href: '/upcoming-events' },
-          { name: 'Soccer Challenge &#8211; &#8211; Knights of Columbus &#8211;', href: '/soccer-challenge' }
+          { name: 'Soccer Challenge', href: '/soccer-challenge' }
         ]}
       />
 
@@ -34,7 +34,7 @@ export default function Page() {
                 </div>
               ) : (
                 <p className="text-sm text-slate-500">
-                  Join us for our annual Soccer Challenge &#8211; &#8211; Knights of Columbus &#8211; event! Download the files on the right for registration and schedules.
+                  Join us for our annual Soccer Challenge event! Download the files on the right for registration and schedules.
                 </p>
               )}
             </div>

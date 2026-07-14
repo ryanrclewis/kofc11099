@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Why Be a Knight? &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Why Be a Knight? | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Why Be a Knight? &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Why Be a Knight?"
         subtitle="Fraternal updates and announcements from Council #11099 leadership."
         breadcrumbs={[
           { name: 'News', href: '/' },
-          { name: 'Why Be a Knight? &#8211; &#8211; Knights of Columbus &#8211;', href: '/why-be-a-knight' }
+          { name: 'Why Be a Knight?', href: '/why-be-a-knight' }
         ]}
       />
 

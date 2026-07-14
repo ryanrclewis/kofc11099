@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Hello Brother Knights! &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Hello Brother Knights! | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Hello Brother Knights! &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Hello Brother Knights!"
         subtitle="Fraternal updates and announcements from Council #11099 leadership."
         breadcrumbs={[
           { name: 'News', href: '/' },
-          { name: 'Hello Brother Knights! &#8211; &#8211; Knights of Columbus &#8211;', href: '/play-ball' }
+          { name: 'Hello Brother Knights!', href: '/play-ball' }
         ]}
       />
 

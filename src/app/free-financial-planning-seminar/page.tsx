@@ -2,18 +2,18 @@ import SectionHeader from '@/components/SectionHeader';
 import PdfDownloadCard from '@/components/PdfDownloadCard';
 
 export const metadata = {
-  title: 'Free Financial Planning Seminar &#8211; &#8211; Knights of Columbus &#8211; | Knights of Columbus Council #11099',
+  title: 'Free Financial Planning Seminar | Knights of Columbus Council #11099',
 };
 
 export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Free Financial Planning Seminar &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Free Financial Planning Seminar"
         subtitle="Fraternal updates and announcements from Council #11099 leadership."
         breadcrumbs={[
           { name: 'News', href: '/' },
-          { name: 'Free Financial Planning Seminar &#8211; &#8211; Knights of Columbus &#8211;', href: '/free-financial-planning-seminar' }
+          { name: 'Free Financial Planning Seminar', href: '/free-financial-planning-seminar' }
         ]}
       />
 

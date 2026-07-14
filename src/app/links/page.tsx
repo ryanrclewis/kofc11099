@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <div className="flex flex-col min-h-screen bg-light">
       <SectionHeader
-        title="Links &#8211; &#8211; Knights of Columbus &#8211;"
+        title="Links"
         subtitle="A directory of state, supreme, and parish resources for brother Knights."
         breadcrumbs={[{ name: 'Links', href: '/links' }]}
       />
